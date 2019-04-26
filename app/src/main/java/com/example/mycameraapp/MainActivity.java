@@ -58,4 +58,23 @@ public class MainActivity extends AppCompatActivity {
             imageView.setImageBitmap(imageBitmap);
         }
     }
-}
+
+
+    private static final int REQUEST_CAPTURE_IMAGE = 100;
+
+    private void openCameraIntent() {
+        Intent pictureIntent = new Intent(
+                MediaStore.ACTION_IMAGE_CAPTURE
+        );
+        if(pictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(pictureIntent,
+                    REQUEST_CAPTURE_IMAGE);
+        }
+    }
+
+
+
+    }
+
+
+
