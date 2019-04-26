@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_CAPTURE_IMAGE = 100;
 
+
     private void openCameraIntent() {
         Intent pictureIntent = new Intent(
                 MediaStore.ACTION_IMAGE_CAPTURE
